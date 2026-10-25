@@ -3,7 +3,7 @@ import { TonConnectUI } from '@tonconnect/ui';
 const status = document.getElementById('status');
 
 const manifestUrl =
-  'https://YOUR-DOMAIN.example/tonconnect-manifest.json';
+  'https://princebriancud.github.io/ton-ai-trader/tonconnect-manifest.json';
 
 const tonConnectUI = new TonConnectUI({
   manifestUrl,
