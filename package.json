@@ -1,0 +1,27 @@
+{
+  "name": "stonfi-quote-starter",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "quote": "tsx src/quote.ts",
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "dependencies": {
+    "@ston-fi/api": "latest",
+    "@ston-fi/sdk": "latest",
+    "@ton/ton": "latest",
+    "@tonconnect/sdk": "^5.0.0",
+    "@tonconnect/ui": "^5.0.1",
+    "dotenv": "^16.4.7"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.4",
+    "tsx": "^4.19.3",
+    "typescript": "^5.7.3",
+    "vite": "^8.3.5"
+  },
+  "description": "STON.fi swap quote/simulation integration for TON; live execution disabled"
+}

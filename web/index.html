@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TON AI Trader</title>
+  <style>
+    body {
+      background: #101827;
+      color: white;
+      font-family: Arial, sans-serif;
+      max-width: 600px;
+      margin: 50px auto;
+      padding: 20px;
+    }
+    .card {
+      background: #1d293b;
+      padding: 24px;
+      border-radius: 16px;
+    }
+    button {
+      padding: 12px 18px;
+      border: 0;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 12px;
+    }
+    #status {
+      overflow-wrap: anywhere;
+      color: #7dd3fc;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>TON AI Trader</h1>
+    <p>Connect your TON wallet to begin.</p>
+
+    <div id="ton-connect"></div>
+
+    <h3>Wallet status</h3>
+    <p id="status">Not connected</p>
+
+    <p>
+      Trading mode:
+      <strong>Quote only</strong>
+    </p>
+
+    <p id="notice">
+      No transactions will be sent by this page.
+    </p>
+  </div>
+
+  <script type="module" src="/main.js"></script>
+</body>
+</html>
