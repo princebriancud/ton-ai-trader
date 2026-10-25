@@ -1,26 +1,43 @@
-# STON.fi integration — quote and simulation stage
+# TON AI Trader
 
-This module uses the official STON.fi API client to request a real-time swap simulation on TON mainnet. It does **not** sign, send, or broadcast a transaction. Live trading remains disabled.
+A TON blockchain trading project using the STON.fi API.
 
-## Run in Termux
+## Current Features
 
-1. Install Node.js 20+ (`pkg install nodejs-lts`).
-2. `cd stonfi-integration`
-3. `npm install`
-4. `cp .env.example .env`
-5. Edit `.env` with the exact destination jetton address and source amount in blockchain base units.
-6. `npm run typecheck`
-7. `npm run quote`
+- TON-to-token swap quote simulation
+- Expected minimum output calculation
+- Configurable token addresses and amount
+- Slippage tolerance validation
+- TON Connect wallet connection interface
+- GitHub Pages deployment workflow
 
-For native TON as the source, `FROM_ASSET=ton`; 1 TON is 1,000,000,000 nanotons. `TO_ASSET` must be the token's exact TON jetton address, not its ticker/symbol. If you only want to inspect TON, a TON-to-TON swap is not useful.
+## Setup
 
-## Current integration status
+Install Node.js and npm, then run:
 
-- STON.fi v2 API simulation/quote: implemented.
-- Market observation scaffold: included at project root.
-- Wallet connection/signing: not implemented.
-- Transaction broadcast/live orders: not implemented; `LIVE_TRADING_ENABLED=false` is intentional.
+```bash
+npm install
 
-Do not paste a Trust Wallet recovery phrase or private key into Termux scripts, `.env`, chat, or a cloud server. To move to real trades, add a wallet-controlled signing flow (preferably a wallet approval prompt) and implement explicit balance, fee, slippage, token-address, price-impact, duplicate-order, and daily-loss checks. A cloud process cannot spend from Trust Wallet merely because it knows a public wallet address. No strategy can guarantee profit.
+cat > README.md <<'EOF'
+# TON AI Trader
 
-Official reference: https://docs.ston.fi/developer-section/dex/sdk/v2/swap
+A TON blockchain trading project using the STON.fi API.
+
+## Current Features
+
+- TON-to-token swap quote simulation
+- Expected minimum output calculation
+- Configurable token addresses and amount
+- Slippage tolerance validation
+- TON Connect wallet connection interface
+- GitHub Pages deployment workflow
+
+## Setup
+
+Install Node.js and npm, then run:
+
+```bash
+npm install
+
+
+
